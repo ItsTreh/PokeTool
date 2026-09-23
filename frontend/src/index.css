@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-poke-bg text-white font-inter;
+    min-height: 100vh;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-poke-red hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200 hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100;
+  }
+
+  .btn-secondary {
+    @apply bg-poke-secondary hover:bg-poke-card text-white font-semibold py-2 px-4 rounded-lg border border-white/20 transition-all duration-200 hover:scale-105 active:scale-95;
+  }
+
+  .btn-yellow {
+    @apply bg-poke-yellow hover:bg-yellow-400 text-poke-bg font-semibold py-2 px-4 rounded-lg transition-all duration-200 hover:scale-105 active:scale-95;
+  }
+
+  .input-field {
+    @apply w-full bg-poke-secondary border border-white/20 rounded-lg px-3 py-2 text-white placeholder-white/40 focus:outline-none focus:border-poke-yellow focus:ring-1 focus:ring-poke-yellow transition-colors;
+  }
+
+  .card {
+    @apply bg-poke-secondary rounded-xl border border-white/10 p-4;
+  }
+
+  .section-title {
+    @apply text-xl font-bold text-poke-yellow mb-4;
+  }
+}
+
+/* barra de progreso animada */
+.progress-bar {
+  transition: width 0.5s ease-in-out;
+}
+
+/* scroll personalizado */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e63946;
+  border-radius: 3px;
+}
